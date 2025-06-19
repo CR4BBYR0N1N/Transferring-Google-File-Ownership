@@ -131,3 +131,5 @@ class DriveService {
     return await this.searchFiles(query, options);
   }
 }
+
+module.exports = DriveService;

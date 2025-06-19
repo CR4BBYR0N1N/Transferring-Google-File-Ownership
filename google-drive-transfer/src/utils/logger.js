@@ -135,4 +135,5 @@ class Logger {
 
 // Create a singleton instance that can be imported throughout the app
 const logger = new Logger();
+
 module.exports = logger;

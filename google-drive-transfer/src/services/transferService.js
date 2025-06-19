@@ -256,4 +256,4 @@ class TransferService {
   }
 }
 
-module.exports = { DriveService, TransferService };
+module.exports = TransferService;
