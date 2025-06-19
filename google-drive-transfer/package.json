@@ -1,12 +1,25 @@
 {
   "name": "google-drive-transfer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Node.js application for transferring ownership of Google Drive files between accounts",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test:auth": "node -e \"const GoogleAuth = require('./src/auth/auth'); const auth = new GoogleAuth(); console.log('Auth module loaded successfully');\"",
+    "test:config": "node -e \"const config = require('./config/config'); console.log('Configuration:', JSON.stringify(config, null, 2));\"",
+    "clean:tokens": "rm -rf tokens/*.json",
+    "clean:logs": "rm -rf logs/*.log",
+    "setup": "npm install && node -e \"console.log('✅ Setup complete! Please configure your .env file.');\""
   },
-  "keywords": [],
+  "keywords": [
+    "google-drive",
+    "oauth",
+    "file-transfer",
+    "ownership",
+    "google-api",
+    "nodejs"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,5 +30,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
